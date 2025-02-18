@@ -7,4 +7,4 @@ while(b<=4000000):
      c = a+ b
      a = b
      b = c
-print(sum)
+print("Sum of even sequence below four million in fibonacci sequence " , sum )

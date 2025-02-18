@@ -1,0 +1,18 @@
+rgb = imread("rgb.png");
+r = rgb;
+g = rgb;
+b = rgb;
+r(:,:,2) = 0;
+r(:,:,3) = 0;
+g(:,:,1) = 0;
+g(:,:,3) = 0;
+b(:,:,1) = 0;
+b(:,:,2) = 0;
+subplot(2,2,1);
+imshow(rgb) ,title('rgb');
+subplot(2,2,2);
+imshow(r) ,title('red');
+subplot(2,2,3);
+imshow(g) ,title('green');
+subplot(2,2,4);
+imshow(b) ,title('blue');
