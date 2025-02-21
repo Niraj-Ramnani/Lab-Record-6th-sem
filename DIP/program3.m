@@ -6,10 +6,6 @@ e = imadd(c,d);
 f = imsubtract(c,d);
 g = imdivide(c,d);
 h = immultiply(c,d);
-
-
-
-
 subplot(3,2,1);
 imshow(c) , title("chips");
 subplot(3,2,2);
