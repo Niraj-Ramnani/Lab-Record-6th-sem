@@ -11,11 +11,11 @@ imshow(c) , title("chips");
 subplot(3,2,2);
 imshow(d) , title("fabric");
 subplot(3,2,3);
-imshow(e) , title("add");
+imshow(e) , title("additon");
 subplot(3,2,4);
-imshow(f) , title("sub");
+imshow(f) , title("substraction");
 
 subplot(3,2,5);
-imshow(g) , title("mul");
+imshow(g) , title("multiplication");
 subplot(3,2,6);
-imshow(h) , title("div");
+imshow(h) , title("division");
