@@ -1,3 +1,4 @@
+// Write a program to perform arithmetic operations on RGB images 
 i = imread ("coloredChips.png");
 j = imread("fabric.png");
 c = imresize(i,[200 200]);

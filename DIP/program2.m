@@ -1,3 +1,4 @@
+// Write a program to read a RGB image extract 3 colur components red , green , blue 
 rgb = imread("coloredChips.png");
 r = rgb;
 g = rgb;

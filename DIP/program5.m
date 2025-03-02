@@ -1,3 +1,4 @@
+// Write a program in matlab to perform image scaling , rotation and translation
 f = imread("coloredChips.png");
 i = imtranslate(f,[15,25]);
 j = imrotate(f,30);

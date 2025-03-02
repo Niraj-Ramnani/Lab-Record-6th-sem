@@ -1,3 +1,4 @@
+// Write a program in matlab to find negative transform of an image 
 clc;
 close all;
 I = imread("coloredChips.png");
