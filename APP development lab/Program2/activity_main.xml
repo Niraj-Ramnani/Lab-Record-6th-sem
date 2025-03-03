@@ -6,31 +6,46 @@
     android:gravity="center"
     android:padding="20dp">
 
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Form"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingBottom="20dp" />
+
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Username"
+        android:hint="Username"
         android:inputType="text" />
 
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:inputType="textPassword" />
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login" />
 
+    <!-- Message TextView -->
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="18sp"
-        android:textColor="#FF0000" />
+        android:textColor="#FF0000"
+        android:paddingTop="10dp"/>
 </LinearLayout>
