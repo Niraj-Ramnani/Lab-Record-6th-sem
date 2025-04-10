@@ -1,0 +1,16 @@
+x = imread("office_2.jpg");
+x1 = rgb2gray(x);
+f1 = [1 1 1; 1 1 1; 1 1 1];
+f2 = [2 2 2 ; 2 4 2; 2 2 2];
+f3 = [-1 -1 -1 ; -1 -1 -1 ; -1 -1 -1 ];
+subplot(2,2,1);
+imshow(x),title("original");
+subplot(2,2,2);
+y1 = conv2(x1,f1);
+imshow(uint8(y1)),title("funnel 1");
+subplot(2,2,3);
+y2 = conv2(x1,f2);
+imshow(uint8(y2)),title("funnel 2");
+subplot(2,2,4);
+y3 = conv2(x1,f3);
+imshow(uint8(y3)),title("funnel 3");
