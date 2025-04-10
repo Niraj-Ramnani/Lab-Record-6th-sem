@@ -6,4 +6,4 @@ for char in string:
           char_count[char]+=1
      else:
           char_count[char] = 1
-print("count of the characters for thhe string " , char_count)
+print("count of the characters for the string " , char_count)
