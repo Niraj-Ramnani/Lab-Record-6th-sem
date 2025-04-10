@@ -1,0 +1,69 @@
+package com.example.program3;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText etInput;
+    private String currentInput = "";
+    private String operator = "";
+    private double num1 = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        etInput = findViewById(R.id.etInput);
+
+        int[] numButtons = {R.id.btn0, R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9};
+        int[] opButtons = {R.id.btnAdd, R.id.btnSub, R.id.btnMul, R.id.btnDiv};
+
+        View.OnClickListener numClickListener = v -> {
+            Button b = (Button) v;
+            currentInput += b.getText().toString();
+            etInput.setText(currentInput);
+        };
+
+        View.OnClickListener opClickListener = v -> {
+            if (!currentInput.isEmpty()) {
+                num1 = Double.parseDouble(currentInput);
+                Button b = (Button) v;
+                operator = b.getText().toString();
+                currentInput = "";
+                etInput.setText("");
+            }
+        };
+
+        for (int id : numButtons) findViewById(id).setOnClickListener(numClickListener);
+        for (int id : opButtons) findViewById(id).setOnClickListener(opClickListener);
+
+        findViewById(R.id.btnEq).setOnClickListener(v -> {
+            if (!currentInput.isEmpty() && !operator.isEmpty()) {
+                double num2 = Double.parseDouble(currentInput);
+                double result = 0;
+
+                switch (operator) {
+                    case "+": result = num1 + num2; break;
+                    case "-": result = num1 - num2; break;
+                    case "*": result = num1 * num2; break;
+                    case "/": result = num2 != 0 ? num1 / num2 : 0; break;
+                }
+
+                etInput.setText(String.valueOf(result));
+                currentInput = String.valueOf(result);
+                operator = "";
+            }
+        });
+
+        findViewById(R.id.btnClear).setOnClickListener(v -> {
+            currentInput = "";
+            operator = "";
+            num1 = 0;
+            etInput.setText("");
+        });
+    }
+}
